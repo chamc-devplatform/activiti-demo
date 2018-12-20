@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="cp-test" name="小白的第一个流程" isExecutable="true">
+    <extensionElements>
+      <tansun:process_author xmlns:tansun="tansun">""</tansun:process_author>
+      <tansun:pctodourl xmlns:tansun="tansun">"globaltodourl"</tansun:pctodourl>
+      <tansun:pcdoneurl xmlns:tansun="tansun">"globaldoneurl"</tansun:pcdoneurl>
+    </extensionElements>
+    <startEvent id="start2"></startEvent>
+    <userTask id="aaa" name="111" activiti:assignee="zongyingfeng@chamc.com.cn@27642">
+      <extensionElements>
+        <tansun:assignment xmlns:tansun="tansun">{"assigneeType":"assignee","assignee":"zongyingfeng@chamc.com.cn@27642","selectUserModel":"freeStyle"}</tansun:assignment>
+        <tansun:backtype xmlns:tansun="tansun">"None"</tansun:backtype>
+        <tansun:usertaskfunction xmlns:tansun="tansun">""</tansun:usertaskfunction>
+        <tansun:urgedhandle xmlns:tansun="tansun">{"urgedhandle":{"type":["message","app"],"timetype":"hour","frequency":"24","text":"${user}，你好，你有新的待办未处理！请点击${url}处理。"}}</tansun:urgedhandle>
+        <tansun:carboncopy xmlns:tansun="tansun">""</tansun:carboncopy>
+        <tansun:continuouslyapproved xmlns:tansun="tansun">"false"</tansun:continuouslyapproved>
+        <tansun:tableurl xmlns:tansun="tansun">""</tansun:tableurl>
+        <tansun:pctodourl xmlns:tansun="tansun">""</tansun:pctodourl>
+        <tansun:pcdoneurl xmlns:tansun="tansun">""</tansun:pcdoneurl>
+        <tansun:mobiletodourl xmlns:tansun="tansun">""</tansun:mobiletodourl>
+        <tansun:mobiledoneurl xmlns:tansun="tansun">""</tansun:mobiledoneurl>
+        <tansun:kmstodourl xmlns:tansun="tansun">""</tansun:kmstodourl>
+        <tansun:isstartnode xmlns:tansun="tansun">""</tansun:isstartnode>
+        <tansun:isendnode xmlns:tansun="tansun">""</tansun:isendnode>
+        <tansun:isroleassign xmlns:tansun="tansun">""</tansun:isroleassign>
+        <tansun:multiinstance_oppose_condition xmlns:tansun="tansun">""</tansun:multiinstance_oppose_condition>
+        <tansun:multiinstance_oppose_target xmlns:tansun="tansun">""</tansun:multiinstance_oppose_target>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-3F9A20BC-65E6-4C8E-8CCF-8E09893080CA" sourceRef="start2" targetRef="aaa"></sequenceFlow>
+    <userTask id="eeee" name="2222">
+      <extensionElements>
+        <tansun:assignment xmlns:tansun="tansun">{"assigneeType":"candidateGroups","candidateRoles":["test-group"],"selectUserModel":"freeStyle"}</tansun:assignment>
+        <tansun:backtype xmlns:tansun="tansun">"None"</tansun:backtype>
+        <tansun:usertaskfunction xmlns:tansun="tansun">""</tansun:usertaskfunction>
+        <tansun:urgedhandle xmlns:tansun="tansun">{"urgedhandle":{"type":["email","message"],"timetype":"hour","frequency":"48","text":"测试提醒内容aaaa"}}</tansun:urgedhandle>
+        <tansun:carboncopy xmlns:tansun="tansun">""</tansun:carboncopy>
+        <tansun:continuouslyapproved xmlns:tansun="tansun">"false"</tansun:continuouslyapproved>
+        <tansun:tableurl xmlns:tansun="tansun">""</tansun:tableurl>
+        <tansun:pctodourl xmlns:tansun="tansun">""</tansun:pctodourl>
+        <tansun:pcdoneurl xmlns:tansun="tansun">""</tansun:pcdoneurl>
+        <tansun:mobiletodourl xmlns:tansun="tansun">""</tansun:mobiletodourl>
+        <tansun:mobiledoneurl xmlns:tansun="tansun">""</tansun:mobiledoneurl>
+        <tansun:kmstodourl xmlns:tansun="tansun">""</tansun:kmstodourl>
+        <tansun:isstartnode xmlns:tansun="tansun">""</tansun:isstartnode>
+        <tansun:isendnode xmlns:tansun="tansun">""</tansun:isendnode>
+        <tansun:isroleassign xmlns:tansun="tansun">""</tansun:isroleassign>
+        <tansun:multiinstance_oppose_condition xmlns:tansun="tansun">""</tansun:multiinstance_oppose_condition>
+        <tansun:multiinstance_oppose_target xmlns:tansun="tansun">""</tansun:multiinstance_oppose_target>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-3C323A4D-C195-435E-A993-FF635DF8E885" sourceRef="aaa" targetRef="eeee"></sequenceFlow>
+    <endEvent id="sid-728DCD37-B8B9-4780-9737-A79AA188DC1A"></endEvent>
+    <sequenceFlow id="sid-2AD391ED-5A03-4713-9428-0437F0EEB53C" sourceRef="eeee" targetRef="sid-728DCD37-B8B9-4780-9737-A79AA188DC1A"></sequenceFlow>
+    <startEvent id="start1" name="Start"></startEvent>
+    <userTask id="usertask1" name="User Task"></userTask>
+    <sequenceFlow id="flow1" sourceRef="start1" targetRef="usertask1"></sequenceFlow>
+    <userTask id="usertask2" name="User Task"></userTask>
+    <sequenceFlow id="flow2" sourceRef="usertask1" targetRef="usertask2"></sequenceFlow>
+    <userTask id="usertask3" name="User Task"></userTask>
+    <sequenceFlow id="flow3" sourceRef="usertask2" targetRef="usertask3"></sequenceFlow>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <sequenceFlow id="flow4" sourceRef="usertask3" targetRef="endevent1"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_cp-test">
+    <bpmndi:BPMNPlane bpmnElement="cp-test" id="BPMNPlane_cp-test">
+      <bpmndi:BPMNShape bpmnElement="start2" id="BPMNShape_start2">
+        <omgdc:Bounds height="35.0" width="35.0" x="194.0" y="122.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="aaa" id="BPMNShape_aaa">
+        <omgdc:Bounds height="80.0" width="100.0" x="257.0" y="110.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="eeee" id="BPMNShape_eeee">
+        <omgdc:Bounds height="80.0" width="100.0" x="406.0" y="106.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-728DCD37-B8B9-4780-9737-A79AA188DC1A" id="BPMNShape_sid-728DCD37-B8B9-4780-9737-A79AA188DC1A">
+        <omgdc:Bounds height="35.0" width="35.0" x="550.0" y="123.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="start1" id="BPMNShape_start1">
+        <omgdc:Bounds height="35.0" width="35.0" x="300.0" y="280.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="380.0" y="270.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask2" id="BPMNShape_usertask2">
+        <omgdc:Bounds height="55.0" width="105.0" x="530.0" y="270.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask3" id="BPMNShape_usertask3">
+        <omgdc:Bounds height="55.0" width="105.0" x="680.0" y="270.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="830.0" y="280.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-3F9A20BC-65E6-4C8E-8CCF-8E09893080CA" id="BPMNEdge_sid-3F9A20BC-65E6-4C8E-8CCF-8E09893080CA">
+        <omgdi:waypoint x="229.0" y="139.0"></omgdi:waypoint>
+        <omgdi:waypoint x="257.0" y="150.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-3C323A4D-C195-435E-A993-FF635DF8E885" id="BPMNEdge_sid-3C323A4D-C195-435E-A993-FF635DF8E885">
+        <omgdi:waypoint x="357.0" y="150.0"></omgdi:waypoint>
+        <omgdi:waypoint x="406.0" y="146.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-2AD391ED-5A03-4713-9428-0437F0EEB53C" id="BPMNEdge_sid-2AD391ED-5A03-4713-9428-0437F0EEB53C">
+        <omgdi:waypoint x="506.0" y="146.0"></omgdi:waypoint>
+        <omgdi:waypoint x="550.0" y="140.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="335.0" y="297.0"></omgdi:waypoint>
+        <omgdi:waypoint x="380.0" y="297.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="485.0" y="297.0"></omgdi:waypoint>
+        <omgdi:waypoint x="530.0" y="297.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="635.0" y="297.0"></omgdi:waypoint>
+        <omgdi:waypoint x="680.0" y="297.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="785.0" y="297.0"></omgdi:waypoint>
+        <omgdi:waypoint x="830.0" y="297.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

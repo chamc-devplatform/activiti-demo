@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="work_demo" name="脚手架工作流demo" isExecutable="true">
+    <extensionElements>
+      <tansun:process_started_class xmlns:tansun="tansun"><![CDATA[""]]></tansun:process_started_class>
+      <tansun:process_completed_class xmlns:tansun="tansun"><![CDATA[""]]></tansun:process_completed_class>
+    </extensionElements>
+    <startEvent id="sid-1195C583-57C0-41F7-B7EF-1F0E5DFF7270"></startEvent>
+    <userTask id="ZDR" name="制单人">
+      <extensionElements>
+        <tansun:backtype xmlns:tansun="tansun"><![CDATA["None"]]></tansun:backtype>
+        <tansun:backrange xmlns:tansun="tansun"><![CDATA["backrange"]]></tansun:backrange>
+        <tansun:usertaskfunction xmlns:tansun="tansun"><![CDATA[{"taskbutton":[{"key":"submitTask","isPend":"Y","alias":["提交"],"url":"sys/demo/workflow/todoBmp","sorted":1}],"rutaskbuttons":{"submitTask":[{"id":"提交"}],"processMsg":[],"terminateProcess":[],"lastTask":[],"suspendProcess":[],"addGroupUser":[],"getTask":[],"activateProcess":[],"relay":[],"releaseTask":[],"delGroupUser":[],"firstTask":[],"appointTask":[],"assign":[]},"hitaskbuttons":{"getBack":[]}}]]></tansun:usertaskfunction>
+        <tansun:urgedhandle xmlns:tansun="tansun"><![CDATA[""]]></tansun:urgedhandle>
+        <tansun:carboncopy xmlns:tansun="tansun"><![CDATA[""]]></tansun:carboncopy>
+        <tansun:continuouslyapproved xmlns:tansun="tansun"><![CDATA["false"]]></tansun:continuouslyapproved>
+        <tansun:tableurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:tableurl>
+        <tansun:pctodourl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pctodourl>
+        <tansun:pcdoneurl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pcdoneurl>
+        <tansun:mobiletodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiletodourl>
+        <tansun:mobiledoneurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiledoneurl>
+        <tansun:kmstodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:kmstodourl>
+        <tansun:isstartnode xmlns:tansun="tansun"><![CDATA["Y"]]></tansun:isstartnode>
+        <tansun:isendnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isendnode>
+        <tansun:isroleassign xmlns:tansun="tansun"><![CDATA[""]]></tansun:isroleassign>
+        <tansun:multiinstance_oppose_condition xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_condition>
+        <tansun:multiinstance_oppose_target xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_target>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-2E3A894B-0D60-4F40-950F-9644989CE706" sourceRef="sid-1195C583-57C0-41F7-B7EF-1F0E5DFF7270" targetRef="ZDR"></sequenceFlow>
+    <userTask id="BMLD" name="部门领导">
+      <extensionElements>
+        <tansun:assignment xmlns:tansun="tansun"><![CDATA[{"assigneeType":"candidateGroups","candidateRoles":["ADMIN"],"selectUserModel":"freeStyle"}]]></tansun:assignment>
+        <tansun:backtype xmlns:tansun="tansun"><![CDATA["None"]]></tansun:backtype>
+        <tansun:backrange xmlns:tansun="tansun"><![CDATA["backrange"]]></tansun:backrange>
+        <tansun:usertaskfunction xmlns:tansun="tansun"><![CDATA[{"taskbutton":[{"key":"assign","isPend":"Y","alias":["下一步"],"url":"sys/demo/workflow/todoBmp"}],"rutaskbuttons":{"submitTask":[],"processMsg":[],"terminateProcess":[],"lastTask":[],"suspendProcess":[],"addGroupUser":[],"getTask":[],"activateProcess":[],"relay":[],"releaseTask":[],"delGroupUser":[],"firstTask":[],"appointTask":[],"assign":[{"id":"下一步"}]},"hitaskbuttons":{"getBack":[]}}]]></tansun:usertaskfunction>
+        <tansun:urgedhandle xmlns:tansun="tansun"><![CDATA[""]]></tansun:urgedhandle>
+        <tansun:carboncopy xmlns:tansun="tansun"><![CDATA[""]]></tansun:carboncopy>
+        <tansun:continuouslyapproved xmlns:tansun="tansun"><![CDATA["false"]]></tansun:continuouslyapproved>
+        <tansun:tableurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:tableurl>
+        <tansun:pctodourl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pctodourl>
+        <tansun:pcdoneurl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pcdoneurl>
+        <tansun:mobiletodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiletodourl>
+        <tansun:mobiledoneurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiledoneurl>
+        <tansun:kmstodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:kmstodourl>
+        <tansun:isstartnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isstartnode>
+        <tansun:isendnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isendnode>
+        <tansun:isroleassign xmlns:tansun="tansun"><![CDATA[""]]></tansun:isroleassign>
+        <tansun:multiinstance_oppose_condition xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_condition>
+        <tansun:multiinstance_oppose_target xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_target>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-683E1AC5-2212-4F2E-AC6D-01A05E6DB745" sourceRef="ZDR" targetRef="BMLD"></sequenceFlow>
+    <userTask id="HQ" name="会签" activiti:assignee="${assignee}">
+      <extensionElements>
+        <tansun:assignment xmlns:tansun="tansun"><![CDATA[{"assigneeType":"candidateOrgsAndRoles","assignee":"${assignee}","candidateOrgsAndRoles":{"roleList":["ADMIN"]},"orgSelectType":"sameWithStartUserDeptId","selectUserModel":"freeStyle"}]]></tansun:assignment>
+        <tansun:backtype xmlns:tansun="tansun"><![CDATA["None"]]></tansun:backtype>
+        <tansun:backrange xmlns:tansun="tansun"><![CDATA["backrange"]]></tansun:backrange>
+        <tansun:usertaskfunction xmlns:tansun="tansun"><![CDATA[{"taskbutton":[{"key":"submitTask","isPend":"Y","alias":["同意"],"url":"sys/demo/workflow/todoBmp","sorted":1},{"key":"relay","isPend":"Y","alias":["转办"],"url":"sys/demo/workflow/todoBmp","sorted":2}],"rutaskbuttons":{"submitTask":[{"id":"同意"}],"processMsg":[],"terminateProcess":[],"lastTask":[],"suspendProcess":[],"addGroupUser":[],"getTask":[],"activateProcess":[],"relay":[{"id":"转办"}],"releaseTask":[],"delGroupUser":[],"firstTask":[],"appointTask":[],"assign":[]},"hitaskbuttons":{"getBack":[]}}]]></tansun:usertaskfunction>
+        <tansun:urgedhandle xmlns:tansun="tansun"><![CDATA[""]]></tansun:urgedhandle>
+        <tansun:carboncopy xmlns:tansun="tansun"><![CDATA[""]]></tansun:carboncopy>
+        <tansun:continuouslyapproved xmlns:tansun="tansun"><![CDATA["false"]]></tansun:continuouslyapproved>
+        <tansun:tableurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:tableurl>
+        <tansun:pctodourl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pctodourl>
+        <tansun:pcdoneurl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pcdoneurl>
+        <tansun:mobiletodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiletodourl>
+        <tansun:mobiledoneurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiledoneurl>
+        <tansun:kmstodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:kmstodourl>
+        <tansun:isstartnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isstartnode>
+        <tansun:isendnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isendnode>
+        <extensionElement>
+        	<tansun:isroleassign xmlns:tansun="tansun"><![CDATA["extensionElementttt"]]></tansun:isroleassign>
+        	<multiInstanceLoopCharacteristics isSequential="false" activiti:collection="${assigneeList}" activiti:elementVariable="assignee">
+        		<completionCondition>${nrOfCompletedInstances/nrOfInstances &gt;= 1}</completionCondition>
+      		</multiInstanceLoopCharacteristics>
+        </extensionElement>
+        <tansun:multiinstance_oppose_condition xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_condition>
+        <tansun:multiinstance_oppose_target xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_target>
+      </extensionElements>
+      <multiInstanceLoopCharacteristics isSequential="false" activiti:collection="${assigneeList}" activiti:elementVariable="assignee">
+        <completionCondition>${nrOfCompletedInstances/nrOfInstances &gt;= 1}</completionCondition>
+      </multiInstanceLoopCharacteristics>
+    </userTask>
+    <userTask id="JCBCS" name="计财部初审" activiti:assignee="${nextUser}">
+      <extensionElements>
+        <tansun:assignment xmlns:tansun="tansun"><![CDATA[{"assigneeType":"assignee","assignee":"${nextUser}","selectUserModel":"selectOneUser"}]]></tansun:assignment>
+        <tansun:backtype xmlns:tansun="tansun"><![CDATA["None"]]></tansun:backtype>
+        <tansun:backrange xmlns:tansun="tansun"><![CDATA["backrange"]]></tansun:backrange>
+        <tansun:usertaskfunction xmlns:tansun="tansun"><![CDATA[{"taskbutton":[{"key":"lastTask","isPend":"Y","alias":["回退至上一步"],"url":"sys/demo/workflow/todoBmp","sorted":4},{"key":"relay","isPend":"Y","alias":["转办"],"url":"sys/demo/workflow/todoBmp","sorted":2},{"key":"firstTask","isPend":"Y","alias":["退回第一步"],"url":"sys/demo/workflow/todoBmp","sorted":3},{"key":"assign","isPend":"Y","alias":["同意"],"url":"sys/demo/workflow/todoBmp","sorted":1}],"rutaskbuttons":{"submitTask":[],"processMsg":[],"terminateProcess":[],"lastTask":[{"id":"回退至上一步"}],"suspendProcess":[],"addGroupUser":[],"getTask":[],"activateProcess":[],"relay":[{"id":"转办"}],"releaseTask":[],"delGroupUser":[],"firstTask":[{"id":"退回第一步"}],"appointTask":[],"assign":[{"id":"同意"}]},"hitaskbuttons":{"getBack":[]}}]]></tansun:usertaskfunction>
+        <tansun:urgedhandle xmlns:tansun="tansun"><![CDATA[""]]></tansun:urgedhandle>
+        <tansun:carboncopy xmlns:tansun="tansun"><![CDATA[""]]></tansun:carboncopy>
+        <tansun:continuouslyapproved xmlns:tansun="tansun"><![CDATA["false"]]></tansun:continuouslyapproved>
+        <tansun:tableurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:tableurl>
+        <tansun:pctodourl xmlns:tansun="tansun"><![CDATA["workflow/demo/TestManage"]]></tansun:pctodourl>
+        <tansun:pcdoneurl xmlns:tansun="tansun"><![CDATA["workflow/demo/TestManage"]]></tansun:pcdoneurl>
+        <tansun:mobiletodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiletodourl>
+        <tansun:mobiledoneurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiledoneurl>
+        <tansun:kmstodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:kmstodourl>
+        <tansun:isstartnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isstartnode>
+        <tansun:isendnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isendnode>
+        <tansun:isroleassign xmlns:tansun="tansun"><![CDATA[""]]></tansun:isroleassign>
+        <tansun:multiinstance_oppose_condition xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_condition>
+        <tansun:multiinstance_oppose_target xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_target>
+      </extensionElements>
+    </userTask>
+    <userTask id="JCBZJZ" name="计财部资金组">
+      <extensionElements>
+        <tansun:assignment xmlns:tansun="tansun"><![CDATA[{"assigneeType":"candidateGroups","candidateRoles":["ADMIN"],"selectUserModel":"freeStyle"}]]></tansun:assignment>
+        <tansun:backtype xmlns:tansun="tansun"><![CDATA["None"]]></tansun:backtype>
+        <tansun:backrange xmlns:tansun="tansun"><![CDATA["backrange"]]></tansun:backrange>
+        <tansun:usertaskfunction xmlns:tansun="tansun"><![CDATA[{"taskbutton":[{"key":"lastTask","isPend":"Y","alias":["回退至上一步"],"url":"sys/demo/workflow/todoBmp","sorted":4},{"key":"relay","isPend":"Y","alias":["转办"],"url":"sys/demo/workflow/todoBmp","sorted":2},{"key":"firstTask","isPend":"Y","alias":["退回第一步"],"url":"sys/demo/workflow/todoBmp","sorted":3},{"key":"assign","isPend":"Y","alias":["同意"],"url":"sys/demo/workflow/todoBmp","sorted":1}],"rutaskbuttons":{"submitTask":[],"processMsg":[],"terminateProcess":[],"lastTask":[{"id":"回退至上一步"}],"suspendProcess":[],"addGroupUser":[],"getTask":[],"activateProcess":[],"relay":[{"id":"转办"}],"releaseTask":[],"delGroupUser":[],"firstTask":[{"id":"退回第一步"}],"appointTask":[],"assign":[{"id":"同意"}]},"hitaskbuttons":{"getBack":[]}}]]></tansun:usertaskfunction>
+        <tansun:urgedhandle xmlns:tansun="tansun"><![CDATA[""]]></tansun:urgedhandle>
+        <tansun:carboncopy xmlns:tansun="tansun"><![CDATA[""]]></tansun:carboncopy>
+        <tansun:continuouslyapproved xmlns:tansun="tansun"><![CDATA["false"]]></tansun:continuouslyapproved>
+        <tansun:tableurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:tableurl>
+        <tansun:pctodourl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pctodourl>
+        <tansun:pcdoneurl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pcdoneurl>
+        <tansun:mobiletodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiletodourl>
+        <tansun:mobiledoneurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiledoneurl>
+        <tansun:kmstodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:kmstodourl>
+        <tansun:isstartnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isstartnode>
+        <tansun:isendnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isendnode>
+        <tansun:isroleassign xmlns:tansun="tansun"><![CDATA[""]]></tansun:isroleassign>
+        <tansun:multiinstance_oppose_condition xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_condition>
+        <tansun:multiinstance_oppose_target xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_target>
+      </extensionElements>
+    </userTask>
+    <userTask id="ZJLSP" name="总经理审批">
+      <extensionElements>
+        <tansun:assignment xmlns:tansun="tansun"><![CDATA[{"assigneeType":"candidateOrgsAndRoles","candidateOrgsAndRoles":{"roleList":["ADMIN"]},"orgSelectType":"sameWithStartUserDeptId","selectUserModel":"freeStyle"}]]></tansun:assignment>
+        <tansun:backtype xmlns:tansun="tansun"><![CDATA["None"]]></tansun:backtype>
+        <tansun:backrange xmlns:tansun="tansun"><![CDATA["backrange"]]></tansun:backrange>
+        <tansun:usertaskfunction xmlns:tansun="tansun"><![CDATA[{"taskbutton":[{"key":"lastTask","isPend":"Y","alias":["回退"],"url":"sys/demo/workflow/todoBmp","sorted":4},{"key":"relay","isPend":"Y","alias":["转办"],"url":"sys/demo/workflow/todoBmp","sorted":2},{"key":"firstTask","isPend":"Y","alias":["退回第一步"],"url":"sys/demo/workflow/todoBmp","sorted":3},{"key":"assign","isPend":"Y","alias":["下一步"],"url":"sys/demo/workflow/todoBmp","sorted":1}],"rutaskbuttons":{"submitTask":[],"processMsg":[],"terminateProcess":[],"lastTask":[{"id":"回退"}],"suspendProcess":[],"addGroupUser":[],"getTask":[],"activateProcess":[],"relay":[{"id":"转办"}],"releaseTask":[],"delGroupUser":[],"firstTask":[{"id":"退回第一步"}],"appointTask":[],"assign":[{"id":"下一步"}]},"hitaskbuttons":{"getBack":[]}}]]></tansun:usertaskfunction>
+        <tansun:urgedhandle xmlns:tansun="tansun"><![CDATA[""]]></tansun:urgedhandle>
+        <tansun:carboncopy xmlns:tansun="tansun"><![CDATA[""]]></tansun:carboncopy>
+        <tansun:continuouslyapproved xmlns:tansun="tansun"><![CDATA["false"]]></tansun:continuouslyapproved>
+        <tansun:tableurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:tableurl>
+        <tansun:pctodourl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pctodourl>
+        <tansun:pcdoneurl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pcdoneurl>
+        <tansun:mobiletodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiletodourl>
+        <tansun:mobiledoneurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiledoneurl>
+        <tansun:kmstodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:kmstodourl>
+        <tansun:isstartnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isstartnode>
+        <tansun:isendnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isendnode>
+        <tansun:isroleassign xmlns:tansun="tansun"><![CDATA[""]]></tansun:isroleassign>
+        <tansun:multiinstance_oppose_condition xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_condition>
+        <tansun:multiinstance_oppose_target xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_target>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="sid-3B6FA46D-D04B-4E4A-BE2A-957D48CFFBA3"></exclusiveGateway>
+    <userTask id="JCBFS" name="计财部复审" activiti:assignee="yuanminghe@chamc.com.cn@26063">
+      <extensionElements>
+        <tansun:assignment xmlns:tansun="tansun"><![CDATA[{"assigneeType":"assignee","assignee":"yuanminghe@chamc.com.cn@26063","selectUserModel":"freeStyle"}]]></tansun:assignment>
+        <tansun:backtype xmlns:tansun="tansun"><![CDATA["None"]]></tansun:backtype>
+        <tansun:backrange xmlns:tansun="tansun"><![CDATA["backrange"]]></tansun:backrange>
+        <tansun:usertaskfunction xmlns:tansun="tansun"><![CDATA[{"taskbutton":[{"key":"relay","isPend":"Y","alias":["转办"],"url":"sys/demo/workflow/todoBmp","sorted":2},{"key":"firstTask","isPend":"Y","alias":["退回第一步"],"url":"sys/demo/workflow/todoBmp","sorted":3},{"key":"assign","isPend":"Y","alias":["同意"],"url":"sys/demo/workflow/todoBmp","sorted":1}],"rutaskbuttons":{"submitTask":[],"processMsg":[],"terminateProcess":[],"lastTask":[],"suspendProcess":[],"addGroupUser":[],"getTask":[],"activateProcess":[],"relay":[{"id":"转办"}],"releaseTask":[],"delGroupUser":[],"firstTask":[{"id":"退回第一步"}],"appointTask":[],"assign":[{"id":"同意"}]},"hitaskbuttons":{"getBack":[]}}]]></tansun:usertaskfunction>
+        <tansun:urgedhandle xmlns:tansun="tansun"><![CDATA[""]]></tansun:urgedhandle>
+        <tansun:carboncopy xmlns:tansun="tansun"><![CDATA[""]]></tansun:carboncopy>
+        <tansun:continuouslyapproved xmlns:tansun="tansun"><![CDATA["false"]]></tansun:continuouslyapproved>
+        <tansun:tableurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:tableurl>
+        <tansun:pctodourl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pctodourl>
+        <tansun:pcdoneurl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pcdoneurl>
+        <tansun:mobiletodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiletodourl>
+        <tansun:mobiledoneurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiledoneurl>
+        <tansun:kmstodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:kmstodourl>
+        <tansun:isstartnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isstartnode>
+        <tansun:isendnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isendnode>
+        <tansun:isroleassign xmlns:tansun="tansun"><![CDATA[""]]></tansun:isroleassign>
+        <tansun:multiinstance_oppose_condition xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_condition>
+        <tansun:multiinstance_oppose_target xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_target>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-64638BB2-C6EA-4A80-AE53-96D0A5EFABBA" sourceRef="HQ" targetRef="JCBFS"></sequenceFlow>
+    <sequenceFlow id="sid-0DA7A25B-6BF5-44D4-ABC9-E18A714B48E7" sourceRef="JCBFS" targetRef="JCBZJZ"></sequenceFlow>
+    <userTask id="LDSP" name="领导审批" activiti:assignee="${nextUser}">
+      <extensionElements>
+        <tansun:assignment xmlns:tansun="tansun"><![CDATA[{"assigneeType":"assignee","assignee":"${nextUser}","selectUserModel":"selectOneUser"}]]></tansun:assignment>
+        <tansun:backtype xmlns:tansun="tansun"><![CDATA["None"]]></tansun:backtype>
+        <tansun:backrange xmlns:tansun="tansun"><![CDATA["backrange"]]></tansun:backrange>
+        <tansun:usertaskfunction xmlns:tansun="tansun"><![CDATA[{"taskbutton":[{"key":"submitTask","isPend":"Y","alias":["同意"],"url":"sys/demo/workflow/todoBmp","sorted":1},{"key":"lastTask","isPend":"Y","alias":["回退"],"url":"sys/demo/workflow/todoBmp","sorted":4},{"key":"relay","isPend":"Y","alias":["转办"],"url":"sys/demo/workflow/todoBmp","sorted":2},{"key":"firstTask","isPend":"Y","alias":["退回第一步"],"url":"sys/demo/workflow/todoBmp","sorted":3}],"rutaskbuttons":{"submitTask":[{"id":"同意"}],"processMsg":[],"terminateProcess":[],"lastTask":[{"id":"回退"}],"suspendProcess":[],"addGroupUser":[],"getTask":[],"activateProcess":[],"relay":[{"id":"转办"}],"releaseTask":[],"delGroupUser":[],"firstTask":[{"id":"退回第一步"}],"appointTask":[],"assign":[]},"hitaskbuttons":{"getBack":[]}}]]></tansun:usertaskfunction>
+        <tansun:urgedhandle xmlns:tansun="tansun"><![CDATA[""]]></tansun:urgedhandle>
+        <tansun:carboncopy xmlns:tansun="tansun"><![CDATA[""]]></tansun:carboncopy>
+        <tansun:continuouslyapproved xmlns:tansun="tansun"><![CDATA["false"]]></tansun:continuouslyapproved>
+        <tansun:tableurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:tableurl>
+        <tansun:pctodourl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pctodourl>
+        <tansun:pcdoneurl xmlns:tansun="tansun"><![CDATA["/sys/test/test/page/testManage"]]></tansun:pcdoneurl>
+        <tansun:mobiletodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiletodourl>
+        <tansun:mobiledoneurl xmlns:tansun="tansun"><![CDATA[""]]></tansun:mobiledoneurl>
+        <tansun:kmstodourl xmlns:tansun="tansun"><![CDATA[""]]></tansun:kmstodourl>
+        <tansun:isstartnode xmlns:tansun="tansun"><![CDATA[""]]></tansun:isstartnode>
+        <tansun:isendnode xmlns:tansun="tansun"><![CDATA["Y"]]></tansun:isendnode>
+        <tansun:isroleassign xmlns:tansun="tansun"><![CDATA[""]]></tansun:isroleassign>
+        <tansun:multiinstance_oppose_condition xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_condition>
+        <tansun:multiinstance_oppose_target xmlns:tansun="tansun"><![CDATA[""]]></tansun:multiinstance_oppose_target>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-00F4255F-22E0-4ABD-9DB1-7860C5D5411F" sourceRef="LDSP" targetRef="sid-1A4B22C7-4C83-47BD-84D2-F6B81982F8C5"></sequenceFlow>
+    <endEvent id="sid-1A4B22C7-4C83-47BD-84D2-F6B81982F8C5"></endEvent>
+    <sequenceFlow id="sid-0F1FDCA2-C4FA-4E22-933A-3894CE780456" sourceRef="JCBZJZ" targetRef="ZJLSP"></sequenceFlow>
+    <endEvent id="sid-9E70F12C-C6EC-467A-85CA-49C760C72CBF"></endEvent>
+    <exclusiveGateway id="sid-390A6AB4-40B7-4869-97A2-8E36238B0D17"></exclusiveGateway>
+    <sequenceFlow id="sid-4227778F-93DD-4D7C-80D9-DC5622FA6D0B" sourceRef="JCBCS" targetRef="JCBZJZ"></sequenceFlow>
+    <sequenceFlow id="sid-D73B73DD-1588-41A7-AF72-B441D310E264" sourceRef="ZJLSP" targetRef="sid-390A6AB4-40B7-4869-97A2-8E36238B0D17"></sequenceFlow>
+    <sequenceFlow id="sid-4B0E86AB-4BA1-4F5D-AD36-95E44736A7B4" sourceRef="sid-390A6AB4-40B7-4869-97A2-8E36238B0D17" targetRef="sid-9E70F12C-C6EC-467A-85CA-49C760C72CBF">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${LDSP==0}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-33296370-E17D-4541-B37F-7B9FB6D73C3F" sourceRef="sid-390A6AB4-40B7-4869-97A2-8E36238B0D17" targetRef="LDSP">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${LDSP==1}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-771F8FB4-B7BC-4465-88AE-92755520548C" sourceRef="BMLD" targetRef="sid-3B6FA46D-D04B-4E4A-BE2A-957D48CFFBA3"></sequenceFlow>
+    <sequenceFlow id="sid-BECB0464-4833-4650-BBD4-787621FB5914" name="不会签" sourceRef="sid-3B6FA46D-D04B-4E4A-BE2A-957D48CFFBA3" targetRef="JCBCS">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sign==0}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-9E86F2C3-A778-4B1C-B0FB-D160964C8333" name="会签" sourceRef="sid-3B6FA46D-D04B-4E4A-BE2A-957D48CFFBA3" targetRef="HQ">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sign==1}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_work_demo">
+    <bpmndi:BPMNPlane bpmnElement="work_demo" id="BPMNPlane_work_demo">
+      <bpmndi:BPMNShape bpmnElement="sid-1195C583-57C0-41F7-B7EF-1F0E5DFF7270" id="BPMNShape_sid-1195C583-57C0-41F7-B7EF-1F0E5DFF7270">
+        <omgdc:Bounds height="30.0" width="30.0" x="0.0" y="374.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="ZDR" id="BPMNShape_ZDR">
+        <omgdc:Bounds height="80.0" width="100.0" x="75.0" y="349.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="BMLD" id="BPMNShape_BMLD">
+        <omgdc:Bounds height="80.0" width="100.0" x="210.0" y="349.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="HQ" id="BPMNShape_HQ">
+        <omgdc:Bounds height="80.0" width="100.0" x="462.0" y="349.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="JCBCS" id="BPMNShape_JCBCS">
+        <omgdc:Bounds height="80.0" width="100.0" x="335.0" y="480.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="JCBZJZ" id="BPMNShape_JCBZJZ">
+        <omgdc:Bounds height="80.0" width="100.0" x="777.0" y="349.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="ZJLSP" id="BPMNShape_ZJLSP">
+        <omgdc:Bounds height="80.0" width="100.0" x="915.0" y="349.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-3B6FA46D-D04B-4E4A-BE2A-957D48CFFBA3" id="BPMNShape_sid-3B6FA46D-D04B-4E4A-BE2A-957D48CFFBA3">
+        <omgdc:Bounds height="40.0" width="40.0" x="365.0" y="369.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="JCBFS" id="BPMNShape_JCBFS">
+        <omgdc:Bounds height="80.0" width="100.0" x="600.0" y="349.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="LDSP" id="BPMNShape_LDSP">
+        <omgdc:Bounds height="80.0" width="100.0" x="1037.0" y="450.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-1A4B22C7-4C83-47BD-84D2-F6B81982F8C5" id="BPMNShape_sid-1A4B22C7-4C83-47BD-84D2-F6B81982F8C5">
+        <omgdc:Bounds height="28.0" width="28.0" x="1185.0" y="476.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-9E70F12C-C6EC-467A-85CA-49C760C72CBF" id="BPMNShape_sid-9E70F12C-C6EC-467A-85CA-49C760C72CBF">
+        <omgdc:Bounds height="28.0" width="28.0" x="1170.0" y="375.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-390A6AB4-40B7-4869-97A2-8E36238B0D17" id="BPMNShape_sid-390A6AB4-40B7-4869-97A2-8E36238B0D17">
+        <omgdc:Bounds height="40.0" width="40.0" x="1067.0" y="369.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-9E86F2C3-A778-4B1C-B0FB-D160964C8333" id="BPMNEdge_sid-9E86F2C3-A778-4B1C-B0FB-D160964C8333">
+        <omgdi:waypoint x="405.0" y="389.0"></omgdi:waypoint>
+        <omgdi:waypoint x="462.0" y="389.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-4227778F-93DD-4D7C-80D9-DC5622FA6D0B" id="BPMNEdge_sid-4227778F-93DD-4D7C-80D9-DC5622FA6D0B">
+        <omgdi:waypoint x="435.0" y="520.0"></omgdi:waypoint>
+        <omgdi:waypoint x="827.0" y="520.0"></omgdi:waypoint>
+        <omgdi:waypoint x="827.0" y="429.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-683E1AC5-2212-4F2E-AC6D-01A05E6DB745" id="BPMNEdge_sid-683E1AC5-2212-4F2E-AC6D-01A05E6DB745">
+        <omgdi:waypoint x="175.0" y="389.0"></omgdi:waypoint>
+        <omgdi:waypoint x="210.0" y="389.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-0F1FDCA2-C4FA-4E22-933A-3894CE780456" id="BPMNEdge_sid-0F1FDCA2-C4FA-4E22-933A-3894CE780456">
+        <omgdi:waypoint x="877.0" y="389.0"></omgdi:waypoint>
+        <omgdi:waypoint x="915.0" y="389.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-0DA7A25B-6BF5-44D4-ABC9-E18A714B48E7" id="BPMNEdge_sid-0DA7A25B-6BF5-44D4-ABC9-E18A714B48E7">
+        <omgdi:waypoint x="700.0" y="389.0"></omgdi:waypoint>
+        <omgdi:waypoint x="777.0" y="389.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-64638BB2-C6EA-4A80-AE53-96D0A5EFABBA" id="BPMNEdge_sid-64638BB2-C6EA-4A80-AE53-96D0A5EFABBA">
+        <omgdi:waypoint x="562.0" y="389.0"></omgdi:waypoint>
+        <omgdi:waypoint x="600.0" y="389.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-D73B73DD-1588-41A7-AF72-B441D310E264" id="BPMNEdge_sid-D73B73DD-1588-41A7-AF72-B441D310E264">
+        <omgdi:waypoint x="1015.0" y="389.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1067.0" y="389.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-33296370-E17D-4541-B37F-7B9FB6D73C3F" id="BPMNEdge_sid-33296370-E17D-4541-B37F-7B9FB6D73C3F">
+        <omgdi:waypoint x="1087.0" y="409.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1087.0" y="450.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-771F8FB4-B7BC-4465-88AE-92755520548C" id="BPMNEdge_sid-771F8FB4-B7BC-4465-88AE-92755520548C">
+        <omgdi:waypoint x="310.0" y="389.0"></omgdi:waypoint>
+        <omgdi:waypoint x="365.0" y="389.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-00F4255F-22E0-4ABD-9DB1-7860C5D5411F" id="BPMNEdge_sid-00F4255F-22E0-4ABD-9DB1-7860C5D5411F">
+        <omgdi:waypoint x="1137.0" y="490.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1185.0" y="490.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-4B0E86AB-4BA1-4F5D-AD36-95E44736A7B4" id="BPMNEdge_sid-4B0E86AB-4BA1-4F5D-AD36-95E44736A7B4">
+        <omgdi:waypoint x="1107.0" y="389.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1170.0" y="389.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-2E3A894B-0D60-4F40-950F-9644989CE706" id="BPMNEdge_sid-2E3A894B-0D60-4F40-950F-9644989CE706">
+        <omgdi:waypoint x="30.0" y="389.0"></omgdi:waypoint>
+        <omgdi:waypoint x="75.0" y="389.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-BECB0464-4833-4650-BBD4-787621FB5914" id="BPMNEdge_sid-BECB0464-4833-4650-BBD4-787621FB5914">
+        <omgdi:waypoint x="385.0" y="409.0"></omgdi:waypoint>
+        <omgdi:waypoint x="385.0" y="480.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
